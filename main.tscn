@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://nwoncet8iue3"]
+
+[ext_resource type="Script" uid="uid://cctenp8rcjdc4" path="res://player.gd" id="1_ig7tw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ig7tw"]
+size = Vector3(1, 0.51953125, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig7tw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
+material = SubResource("StandardMaterial3D_ig7tw")
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_1bvp3"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_lquwl"]
+
+[node name="Node3D" type="Node3D" unique_id=1734127761]
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=597850687]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("1_ig7tw")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="Player" unique_id=871634620]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+spring_length = 5.0
+
+[node name="Camera3D" type="Camera3D" parent="Player/SpringArm3D" unique_id=2084676131]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=2041052804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24023438, 0)
+shape = SubResource("BoxShape3D_ig7tw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player/CollisionShape3D" unique_id=623322499]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_ig7tw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=315891851]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1049874912]
+shape = SubResource("WorldBoundaryShape3D_1bvp3")
+debug_color = Color(0, 0.6000266, 0.70180756, 0.41960785)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=412704174]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0)
+mesh = SubResource("PlaneMesh_lquwl")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1113677451]
+transform = Transform3D(1, 0, 0, 0, 0.15126073, 0.9884939, 0, -0.9884939, 0.15126073, 0, 9.888631, 1.1585541)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1403781770]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=112226181]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 173.0
+offset_bottom = 113.0
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer/Control" unique_id=1856928855]
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="CanvasLayer/Control" unique_id=1201446885]
+
+[node name="Control2" type="Control" parent="CanvasLayer" unique_id=1190344391]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control2" unique_id=810999862]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control2" unique_id=299623475]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
