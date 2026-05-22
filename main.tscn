@@ -1,39 +1,132 @@
 [gd_scene format=3 uid="uid://nwoncet8iue3"]
 
 [ext_resource type="Script" uid="uid://cctenp8rcjdc4" path="res://player.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://ewgge3sx1riw" path="res://addons/uip_joystick/joystick.tscn" id="2_0xm2m"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ig7tw"]
-size = Vector3(1, 0.51953125, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h2yge"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_1bvp3"]
+sky_material = SubResource("ProceduralSkyMaterial_h2yge")
+
+[sub_resource type="Environment" id="Environment_lquwl"]
+background_mode = 2
+sky = SubResource("Sky_1bvp3")
+tonemap_mode = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig7tw"]
+albedo_color = Color(0.5168869, 0.27206102, 0.19776335, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
 material = SubResource("StandardMaterial3D_ig7tw")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ig7tw"]
+size = Vector3(1, 0.51953125, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_0xm2m"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_1bvp3"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_h2yge"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_lquwl"]
+
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_1bvp3"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_272bh"]
+albedo_color = Color(0.21, 0.105, 0, 1)
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_lquwl"]
+material = SubResource("StandardMaterial3D_272bh")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5vw27"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kek77"]
+albedo_color = Color(0.11561335, 0.29, 0.0348, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4c57u"]
+material = SubResource("StandardMaterial3D_kek77")
 
 [node name="Node3D" type="Node3D" unique_id=1734127761]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=995328878]
+environment = SubResource("Environment_lquwl")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=77590684]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 23.302166, -0.2861662)
+light_color = Color(1, 1, 0.9411765, 1)
+shadow_enabled = true
 
 [node name="Player" type="CharacterBody3D" parent="." unique_id=597850687]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("1_ig7tw")
 
-[node name="SpringArm3D" type="SpringArm3D" parent="Player" unique_id=871634620]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+[node name="DroneYaw" type="Node3D" parent="Player" unique_id=942333990]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player/DroneYaw" unique_id=623322499]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0.24023438, 0)
+mesh = SubResource("BoxMesh_ig7tw")
+
+[node name="CameraRoot" type="Node3D" parent="Player" unique_id=2017056635]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="Player/CameraRoot" unique_id=871634620]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1203501, 0)
 spring_length = 5.0
 
-[node name="Camera3D" type="Camera3D" parent="Player/SpringArm3D" unique_id=2084676131]
+[node name="Camera3D" type="Camera3D" parent="Player/CameraRoot/SpringArm3D" unique_id=2084676131]
 transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=2041052804]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24023438, 0)
 shape = SubResource("BoxShape3D_ig7tw")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Player/CollisionShape3D" unique_id=623322499]
-transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("BoxMesh_ig7tw")
+[node name="CanvasLayer" type="CanvasLayer" parent="Player" unique_id=1403781770]
+
+[node name="ButtonsContainer" type="Control" parent="Player/CanvasLayer" unique_id=112226181]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 173.0
+offset_bottom = 113.0
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Player/CanvasLayer/ButtonsContainer" unique_id=1856928855]
+position = Vector2(915, 138)
+scale = Vector2(100, 100)
+texture_normal = SubResource("CanvasTexture_0xm2m")
+action = "move_up"
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="Player/CanvasLayer/ButtonsContainer" unique_id=1201446885]
+position = Vector2(913, 354.99997)
+scale = Vector2(100, 100)
+texture_normal = SubResource("CanvasTexture_1bvp3")
+action = "move_down"
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="Player/CanvasLayer/ButtonsContainer" unique_id=927104429]
+position = Vector2(1019, 247)
+scale = Vector2(100, 100)
+texture_normal = SubResource("CanvasTexture_h2yge")
+action = "turn_right"
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="Player/CanvasLayer/ButtonsContainer" unique_id=252658647]
+position = Vector2(806, 248)
+scale = Vector2(100, 100)
+texture_normal = SubResource("CanvasTexture_lquwl")
+action = "turn_left"
+
+[node name="JoystickContainer" type="Control" parent="Player/CanvasLayer" unique_id=1190344391]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 56.0
+
+[node name="joystick" parent="Player/CanvasLayer/JoystickContainer" unique_id=1446823300 instance=ExtResource("2_0xm2m")]
+layout_mode = 1
+offset_left = 21.0
+offset_top = 251.0
+offset_right = 321.0
+offset_bottom = 551.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=315891851]
 
@@ -45,33 +138,11 @@ debug_color = Color(0, 0.6000266, 0.70180756, 0.41960785)
 transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0)
 mesh = SubResource("PlaneMesh_lquwl")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1113677451]
-transform = Transform3D(1, 0, 0, 0, 0.15126073, 0.9884939, 0, -0.9884939, 0.15126073, 0, 9.888631, 1.1585541)
+[node name="Area3D" type="Area3D" parent="." unique_id=816773970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4983635, -2.999711)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1403781770]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=569003376]
+shape = SubResource("BoxShape3D_5vw27")
 
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=112226181]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 173.0
-offset_bottom = 113.0
-
-[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer/Control" unique_id=1856928855]
-
-[node name="TouchScreenButton2" type="TouchScreenButton" parent="CanvasLayer/Control" unique_id=1201446885]
-
-[node name="Control2" type="Control" parent="CanvasLayer" unique_id=1190344391]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control2" unique_id=810999862]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control2" unique_id=299623475]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D" unique_id=253893194]
+mesh = SubResource("BoxMesh_4c57u")
