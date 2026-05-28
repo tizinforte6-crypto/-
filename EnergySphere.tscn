@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cjpfovo16lijf"]
+
+[ext_resource type="Script" uid="uid://3lpfrir2b1ld" path="res://energy_sphere.gd" id="1_bh43n"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_bh43n"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_kswri"]
+
+[node name="EnergySphere" type="Area3D" unique_id=1574723108]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_bh43n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1165647492]
+shape = SubResource("SphereShape3D_bh43n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2111042304]
+mesh = SubResource("SphereMesh_kswri")

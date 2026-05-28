@@ -1,7 +1,17 @@
 [gd_scene format=3 uid="uid://nwoncet8iue3"]
 
-[ext_resource type="Script" uid="uid://cctenp8rcjdc4" path="res://player.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://bfhrt552yhl2n" path="res://player.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://ewgge3sx1riw" path="res://addons/uip_joystick/joystick.tscn" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://bawsy1v5udmmt" path="res://propeller_1.gd" id="3_7mycd"]
+[ext_resource type="Script" uid="uid://bd50qpnyaptt5" path="res://propeller_2.gd" id="4_272bh"]
+[ext_resource type="Script" uid="uid://w05i0ey725we" path="res://propeller_3.gd" id="5_5vw27"]
+[ext_resource type="Script" uid="uid://chklou6ka0bk1" path="res://propeller_4.gd" id="6_kek77"]
+[ext_resource type="Script" uid="uid://dwarjl7d1wnat" path="res://energy_generator.gd" id="7_5vw27"]
+[ext_resource type="PackedScene" uid="uid://cjpfovo16lijf" path="res://EnergySphere.tscn" id="8_5vw27"]
+[ext_resource type="Script" uid="uid://ppj5ga7o5n6n" path="res://falcon_spawner.gd" id="9_4c57u"]
+[ext_resource type="Script" uid="uid://d4jtwg521yntt" path="res://falcon_template.gd" id="10_4c57u"]
+[ext_resource type="Script" uid="uid://dwp7n34vqk1my" path="res://shop_menu.gd" id="11_efxa6"]
+[ext_resource type="Script" uid="uid://bghryaq10sq1n" path="res://shop_point.gd" id="12_dg77c"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h2yge"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -21,9 +31,6 @@ albedo_color = Color(0.5168869, 0.27206102, 0.19776335, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
 material = SubResource("StandardMaterial3D_ig7tw")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ig7tw"]
-size = Vector3(1, 0.51953125, 1)
-
 [sub_resource type="CanvasTexture" id="CanvasTexture_0xm2m"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_1bvp3"]
@@ -31,6 +38,12 @@ size = Vector3(1, 0.51953125, 1)
 [sub_resource type="CanvasTexture" id="CanvasTexture_h2yge"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_lquwl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ig7tw"]
+size = Vector3(1, 0.51953125, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4c57u"]
+size = Vector3(0.5343933, 0.21777344, 0.5566406)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_1bvp3"]
 
@@ -40,13 +53,23 @@ albedo_color = Color(0.21, 0.105, 0, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_lquwl"]
 material = SubResource("StandardMaterial3D_272bh")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_5vw27"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_0xm2m"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kek77"]
-albedo_color = Color(0.11561335, 0.29, 0.0348, 1)
+[sub_resource type="BoxMesh" id="BoxMesh_h2yge"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_4c57u"]
-material = SubResource("StandardMaterial3D_kek77")
+[sub_resource type="CylinderMesh" id="CylinderMesh_4c57u"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_efxa6"]
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_dg77c"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_efxa6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dg77c"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_efxa6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dg77c"]
 
 [node name="Node3D" type="Node3D" unique_id=1734127761]
 
@@ -58,13 +81,13 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 light_color = Color(1, 1, 0.9411765, 1)
 shadow_enabled = true
 
-[node name="Player" type="CharacterBody3D" parent="." unique_id=597850687]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+[node name="Player" type="CharacterBody3D" parent="." unique_id=597850687 groups=["drone", "player"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5162103, 0)
+collision_layer = 2
+collision_mask = 7
 script = ExtResource("1_ig7tw")
 
-[node name="DroneYaw" type="Node3D" parent="Player" unique_id=942333990]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Player/DroneYaw" unique_id=623322499]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=623322499]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0.24023438, 0)
 mesh = SubResource("BoxMesh_ig7tw")
 
@@ -76,10 +99,6 @@ spring_length = 5.0
 
 [node name="Camera3D" type="Camera3D" parent="Player/CameraRoot/SpringArm3D" unique_id=2084676131]
 transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=2041052804]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24023438, 0)
-shape = SubResource("BoxShape3D_ig7tw")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player" unique_id=1403781770]
 
@@ -128,21 +147,159 @@ offset_top = 251.0
 offset_right = 321.0
 offset_bottom = 551.0
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=2041052804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24023438, 0)
+shape = SubResource("BoxShape3D_ig7tw")
+debug_color = Color(0.9791803, 0, 0.39400238, 0.41960785)
+
+[node name="Propeller1" type="Area3D" parent="Player" unique_id=571374883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002230987, 0.8391452, -0.5814378)
+script = ExtResource("3_7mycd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/Propeller1" unique_id=1800325271]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28825378, -0.39111328, 0.22167969)
+shape = SubResource("BoxShape3D_4c57u")
+debug_color = Color(0.9787833, 0, 0.39719987, 0.41960785)
+
+[node name="Propeller2" type="Area3D" parent="Player" unique_id=2139564894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31, 0.438, -0.34)
+script = ExtResource("4_272bh")
+propeller_id = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/Propeller2" unique_id=506287863]
+shape = SubResource("BoxShape3D_4c57u")
+debug_color = Color(0.9787833, 0, 0.39719987, 0.41960785)
+
+[node name="Propeller3" type="Area3D" parent="Player" unique_id=1135456042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.316, 0.438, 0.31)
+script = ExtResource("5_5vw27")
+propeller_id = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/Propeller3" unique_id=1309628217]
+shape = SubResource("BoxShape3D_4c57u")
+debug_color = Color(0.9787833, 0, 0.39719987, 0.41960785)
+
+[node name="Propeller4" type="Area3D" parent="Player" unique_id=1438880898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.278, 0.438, 0.31)
+script = ExtResource("6_kek77")
+propeller_id = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/Propeller4" unique_id=2047627400]
+debug_color = Color(0.9787833, 0, 0.39719987, 0.41960785)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="Player" unique_id=906657899]
+
+[node name="EnergyLabel" type="Label" parent="Player/CanvasLayer2" unique_id=2061300416]
+offset_right = 180.0
+offset_bottom = 39.0
+
+[node name="ChargeLabel" type="Label" parent="Player/CanvasLayer2" unique_id=497919460]
+offset_left = 996.0
+offset_top = 15.0
+offset_right = 1117.0
+offset_bottom = 51.0
+
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=315891851]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1049874912]
 shape = SubResource("WorldBoundaryShape3D_1bvp3")
 debug_color = Color(0, 0.6000266, 0.70180756, 0.41960785)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=412704174]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=412704174]
 transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0)
 mesh = SubResource("PlaneMesh_lquwl")
 
-[node name="Area3D" type="Area3D" parent="." unique_id=816773970]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4983635, -2.999711)
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1850710841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.0030437, -1.9469501)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=569003376]
-shape = SubResource("BoxShape3D_5vw27")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=18765736]
+shape = SubResource("BoxShape3D_0xm2m")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D" unique_id=253893194]
-mesh = SubResource("BoxMesh_4c57u")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2" unique_id=659350869]
+mesh = SubResource("BoxMesh_h2yge")
+
+[node name="EnergyGenerator" type="Node3D" parent="." unique_id=1840266283]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.359986, 3.6628563)
+script = ExtResource("7_5vw27")
+sphere_scene = ExtResource("8_5vw27")
+
+[node name="SpawnPoint" type="Marker3D" parent="EnergyGenerator" unique_id=119979849]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8225732, 0)
+
+[node name="MeshStage1" type="MeshInstance3D" parent="EnergyGenerator" unique_id=1033027730]
+mesh = SubResource("CylinderMesh_4c57u")
+
+[node name="MeshStage2" type="MeshInstance3D" parent="EnergyGenerator" unique_id=37249348]
+mesh = SubResource("PrismMesh_efxa6")
+
+[node name="MeshStage3" type="MeshInstance3D" parent="EnergyGenerator" unique_id=1331051325]
+mesh = SubResource("TubeTrailMesh_dg77c")
+
+[node name="Timer" type="Timer" parent="EnergyGenerator" unique_id=1182609604]
+
+[node name="FalconSpawner" type="Node3D" parent="." unique_id=135932307 groups=["player"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -246, 69, 0)
+script = ExtResource("9_4c57u")
+
+[node name="FalconTemplate" type="CharacterBody3D" parent="FalconSpawner" unique_id=1890695660]
+script = ExtResource("10_4c57u")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FalconSpawner/FalconTemplate" unique_id=1938768196]
+mesh = SubResource("CapsuleMesh_efxa6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FalconSpawner/FalconTemplate" unique_id=464878417]
+shape = SubResource("CapsuleShape3D_dg77c")
+
+[node name="ShopCanvasLayer" type="CanvasLayer" parent="." unique_id=538159648]
+
+[node name="ShopMenu" type="Panel" parent="ShopCanvasLayer" unique_id=633777508]
+visible = false
+offset_left = 229.0
+offset_top = 23.0
+offset_right = 988.0
+offset_bottom = 597.0
+script = ExtResource("11_efxa6")
+
+[node name="TitleLabel" type="Label" parent="ShopCanvasLayer/ShopMenu" unique_id=136957108]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 15.0
+offset_right = 740.0
+offset_bottom = 38.0
+
+[node name="ItemsContainer" type="VBoxContainer" parent="ShopCanvasLayer/ShopMenu" unique_id=1273894951]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 55.0
+offset_right = 729.0
+offset_bottom = 494.0
+
+[node name="CloseButton" type="Button" parent="ShopCanvasLayer/ShopMenu" unique_id=961094932]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 509.0
+offset_right = 727.0
+offset_bottom = 548.0
+text = "Закрыть магазин"
+
+[node name="ShopPoint" type="Area3D" parent="." unique_id=1210691192]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("12_dg77c")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ShopPoint" unique_id=475226827]
+mesh = SubResource("BoxMesh_efxa6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ShopPoint" unique_id=1862980058]
+shape = SubResource("BoxShape3D_dg77c")
+
+[node name="HintCanvasLayer" type="CanvasLayer" parent="." unique_id=2043772832]
+offset = Vector2(5, 0)
+transform = Transform2D(1, 0, 0, 1, 5, 0)
+
+[node name="ShopHintLabel" type="Label" parent="HintCanvasLayer" unique_id=1095641285]
+offset_left = 416.0
+offset_top = 99.0
+offset_right = 841.0
+offset_bottom = 147.0
+text = "Нажмите клавишу \"E\", чтобы открыть магазин"
