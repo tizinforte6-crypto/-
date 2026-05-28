@@ -60,7 +60,7 @@ var controls_locked: bool = false # запрет управления
 
 func _ready(): #-----стартовая настройка игрока-----
 	add_to_group("player") # магазин и сферы ищут эту группу
-
+	add_to_group("wind_affected") # объект может сдуваться ветром
 	setup_platform()
 	update_energy_ui()
 	update_charge_ui()
@@ -334,3 +334,12 @@ func set_controls_locked(value: bool) -> void: #-----блокировка упр
 
 	if controls_locked:
 		velocity = Vector3.ZERO
+		
+func apply_wind(direction: Vector3, force: float, delta: float) -> void: #-----сдувание ветром-----
+	if crashed:
+		return
+
+	if controls_locked:
+		return
+
+	velocity += direction * force * delta

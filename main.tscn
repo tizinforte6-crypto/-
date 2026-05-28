@@ -12,6 +12,8 @@
 [ext_resource type="Script" uid="uid://d4jtwg521yntt" path="res://falcon_template.gd" id="10_4c57u"]
 [ext_resource type="Script" uid="uid://dwp7n34vqk1my" path="res://shop_menu.gd" id="11_efxa6"]
 [ext_resource type="Script" uid="uid://bghryaq10sq1n" path="res://shop_point.gd" id="12_dg77c"]
+[ext_resource type="Script" uid="uid://cc0x5sa255lbf" path="res://marker_falcon.gd" id="13_ycdy4"]
+[ext_resource type="Script" uid="uid://toiwpn5t0ivv" path="res://wind_manager.gd" id="14_w48qg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h2yge"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -40,10 +42,10 @@ material = SubResource("StandardMaterial3D_ig7tw")
 [sub_resource type="CanvasTexture" id="CanvasTexture_lquwl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ig7tw"]
-size = Vector3(1, 0.51953125, 1)
+size = Vector3(0.5, 0.001, 0.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4c57u"]
-size = Vector3(0.5343933, 0.21777344, 0.5566406)
+size = Vector3(0.534, 0.418, 0.557)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_1bvp3"]
 
@@ -70,6 +72,10 @@ material = SubResource("StandardMaterial3D_272bh")
 [sub_resource type="BoxMesh" id="BoxMesh_efxa6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dg77c"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ycdy4"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_w48qg"]
 
 [node name="Node3D" type="Node3D" unique_id=1734127761]
 
@@ -148,21 +154,20 @@ offset_right = 321.0
 offset_bottom = 551.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=2041052804]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24023438, 0)
 shape = SubResource("BoxShape3D_ig7tw")
 debug_color = Color(0.9791803, 0, 0.39400238, 0.41960785)
 
 [node name="Propeller1" type="Area3D" parent="Player" unique_id=571374883]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002230987, 0.8391452, -0.5814378)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002230987, 0.338, -0.5814378)
 script = ExtResource("3_7mycd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player/Propeller1" unique_id=1800325271]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28825378, -0.39111328, 0.22167969)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.288, 0, 0.222)
 shape = SubResource("BoxShape3D_4c57u")
 debug_color = Color(0.9787833, 0, 0.39719987, 0.41960785)
 
 [node name="Propeller2" type="Area3D" parent="Player" unique_id=2139564894]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31, 0.438, -0.34)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31, 0.338, -0.34)
 script = ExtResource("4_272bh")
 propeller_id = 2
 
@@ -171,7 +176,7 @@ shape = SubResource("BoxShape3D_4c57u")
 debug_color = Color(0.9787833, 0, 0.39719987, 0.41960785)
 
 [node name="Propeller3" type="Area3D" parent="Player" unique_id=1135456042]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.316, 0.438, 0.31)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.316, 0.338, 0.31)
 script = ExtResource("5_5vw27")
 propeller_id = 3
 
@@ -180,11 +185,12 @@ shape = SubResource("BoxShape3D_4c57u")
 debug_color = Color(0.9787833, 0, 0.39719987, 0.41960785)
 
 [node name="Propeller4" type="Area3D" parent="Player" unique_id=1438880898]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.278, 0.438, 0.31)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.278, 0.33800006, 0.31)
 script = ExtResource("6_kek77")
 propeller_id = 4
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/Propeller4" unique_id=2047627400]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/Propeller4" unique_id=1615204656]
+shape = SubResource("BoxShape3D_4c57u")
 debug_color = Color(0.9787833, 0, 0.39719987, 0.41960785)
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="Player" unique_id=906657899]
@@ -303,3 +309,28 @@ offset_top = 99.0
 offset_right = 841.0
 offset_bottom = 147.0
 text = "Нажмите клавишу \"E\", чтобы открыть магазин"
+
+[node name="FalconPatrul" type="Node3D" parent="." unique_id=1340420470]
+
+[node name="MarkerFalcon" type="CharacterBody3D" parent="FalconPatrul" unique_id=1710498025]
+script = ExtResource("13_ycdy4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FalconPatrul/MarkerFalcon" unique_id=1262064843]
+shape = SubResource("SphereShape3D_ycdy4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FalconPatrul/MarkerFalcon" unique_id=660188034]
+mesh = SubResource("SphereMesh_w48qg")
+
+[node name="FalconPatrolMarkers" type="Node3D" parent="FalconPatrul" unique_id=1157330113]
+
+[node name="Marker1" type="Marker3D" parent="FalconPatrul/FalconPatrolMarkers" unique_id=1761439968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19, 33)
+
+[node name="Marker2" type="Marker3D" parent="FalconPatrul/FalconPatrolMarkers" unique_id=401634727]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 15, 2)
+
+[node name="Marker3" type="Marker3D" parent="FalconPatrul/FalconPatrolMarkers" unique_id=347366842]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43, 46, -40)
+
+[node name="WindManager" type="Node3D" parent="." unique_id=289247780]
+script = ExtResource("14_w48qg")
