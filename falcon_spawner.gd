@@ -4,7 +4,11 @@ extends Node3D
 @onready var falcon_template: CharacterBody3D = $FalconTemplate # скрытый шаблон сокола
 
 var falcon_spawn_positions: Array[Vector3] = [ # точки появления соколов
-	Vector3(20.0, 30.0, 20.0),
+	Vector3(82.0, 50.0, -100.0),
+	Vector3(41.0, 45.0, 10.0),
+	Vector3(-21.0, 55.0, 105.0),
+	Vector3(-173.0, 60.0, -8.0)
+
 ]
 
 

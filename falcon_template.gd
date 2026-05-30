@@ -13,7 +13,7 @@ enum FalconState {
 @export var patrol_radius: float = 8.0 # радиус круга
 
 @export_category("Detection")
-@export var detection_half_size: float = 5.0 # проверка игрока по X и Z
+@export var detection_half_size: float = 15.0 # проверка игрока по X и Z
 
 @export_category("Chase")
 @export var chase_speed_multiplier: float = 2.0 # множитель скорости погони
@@ -29,28 +29,36 @@ var locked_y: float = 0.0 # высота патруля
 var patrol_time: float = 0.0
 
 var player: Node3D = null
+@onready var wing_audio: AudioStreamPlayer3D = $WingAudio
+@onready var scream_audio: AudioStreamPlayer3D = $ScreamAudio
+@onready var flap_animation_player: AnimationPlayer = $Flap/AnimationPlayer
+var scream_played: bool = false # крик уже был
 
 
 func _ready() -> void: #-----проверка шаблона-----
-	# FalconTemplate — это шаблон.
 	if not active:
 		visible = false
 		set_physics_process(false)
 		return
 
 	_setup_falcon(global_position)
+	_start_flap_animation()
 
 
 func activate_at_position(pos: Vector3) -> void: #-----включение копии сокола-----
 	active = true
 	visible = true
+	global_position = pos
 	set_physics_process(true)
 
-	global_position = pos
 	_setup_falcon(pos)
+	_start_flap_animation()
 
 
 func _setup_falcon(pos: Vector3) -> void: #-----запоминание точки спавна-----
+	scream_played = false
+	if wing_audio != null and not wing_audio.playing:
+		wing_audio.play()
 	spawn_position = pos
 	locked_y = pos.y
 	patrol_time = 0.0
@@ -122,6 +130,7 @@ func _check_player_below() -> void: #-----проверка игрока сниз
 	var dz: float = abs(player_pos.z - falcon_pos.z)
 
 	if dx <= detection_half_size and dz <= detection_half_size:
+		_play_scream_once()
 		state = FalconState.CHASE
 
 
@@ -157,6 +166,10 @@ func _check_collision_with_player() -> void: #-----проверка удара �
 
 			if node.is_in_group("player") or node.is_in_group("drone"):
 				print("Сокол врезался в игрока")
+
+				if wing_audio != null:
+					wing_audio.stop()
+
 				queue_free()
 				return
 
@@ -182,3 +195,28 @@ func _find_player() -> Node3D: #-----поиск игрока-----
 		return found_player as Node3D
 
 	return null
+
+func _play_scream_once() -> void: #-----крик сокола-----
+	if scream_played:
+		return
+
+	scream_played = true
+
+	if scream_audio != null:
+		scream_audio.play()
+
+func _start_flap_animation() -> void: #-----бесконечный взмах крыльев-----
+	if flap_animation_player == null:
+		print("AnimationPlayer не найден")
+		return
+
+	print("Анимации орла: ", flap_animation_player.get_animation_list())
+
+	if not flap_animation_player.has_animation("Flap"):
+		print("Анимация Flap не найдена")
+		return
+
+	var animation: Animation = flap_animation_player.get_animation("Flap")
+	animation.loop_mode = Animation.LOOP_LINEAR
+
+	flap_animation_player.play("Flap")

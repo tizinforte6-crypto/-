@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bvhgsr0tkivef"]
+
+[ext_resource type="PackedScene" uid="uid://dx4cl6q1814ev" path="res://3d model/fireball__energy_sphere.glb" id="1_n3cug"]
+
+[node name="Sketchfab_Scene" unique_id=1426028538 instance=ExtResource("1_n3cug")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)

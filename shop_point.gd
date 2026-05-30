@@ -3,7 +3,7 @@ extends Area3D
 
 @export var shop_menu_path: NodePath = ^"../ShopCanvasLayer/ShopMenu" # путь к меню
 @export var shop_hint_path: NodePath = ^"../HintCanvasLayer/ShopHintLabel" # путь к подсказке
-
+var shop_mobile_button: Button = null # кнопка открытия на телефоне
 @onready var shop_menu: Control = get_node_or_null(shop_menu_path)
 @onready var shop_hint_label: Label = get_node_or_null(shop_hint_path)
 
@@ -17,7 +17,7 @@ func _ready() -> void: #-----подготовка точки магазина---
 
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
-
+	_find_shop_mobile_button()
 	_hide_hint()
 
 	print("Точка магазина готова")
@@ -41,6 +41,7 @@ func _on_body_entered(body: Node3D) -> void: #-----игрок вошёл в зо
 		return
 
 	print("Игрок вошёл в зону магазина")
+	_show_shop_mobile_button()
 
 	player_inside = body
 	_show_hint()
@@ -54,6 +55,7 @@ func _on_body_exited(body: Node3D) -> void: #-----игрок вышел из з�
 
 	player_inside = null
 	_hide_hint()
+	_hide_shop_mobile_button()
 
 	if shop_menu != null and shop_menu.has_method("close_shop"):
 		shop_menu.close_shop()
@@ -63,7 +65,7 @@ func open_shop() -> void: #-----открытие магазина-----
 	if shop_menu == null:
 		push_warning("ShopPoint: ShopMenu не найден. Проверь путь ../ShopCanvasLayer/ShopMenu")
 		return
-
+	_hide_shop_mobile_button()
 	if player_inside == null:
 		return
 
@@ -91,3 +93,39 @@ func _hide_hint() -> void: #-----скрытие подсказки-----
 		return
 
 	shop_hint_label.visible = false
+
+func _find_shop_mobile_button() -> void: #-----поиск мобильной кнопки-----
+	var player_node := get_tree().get_first_node_in_group("player")
+
+	if player_node == null:
+		return
+
+	shop_mobile_button = player_node.get_node_or_null("CanvasLayer2/ShopMobileButton") as Button
+
+	if shop_mobile_button == null:
+		return
+
+	shop_mobile_button.visible = false
+
+	if not shop_mobile_button.pressed.is_connected(_on_shop_mobile_button_pressed):
+		shop_mobile_button.pressed.connect(_on_shop_mobile_button_pressed)
+
+
+func _show_shop_mobile_button() -> void: #-----показ кнопки магазина-----
+	if shop_mobile_button == null:
+		_find_shop_mobile_button()
+
+	if shop_mobile_button != null:
+		shop_mobile_button.visible = true
+
+
+func _hide_shop_mobile_button() -> void: #-----скрытие кнопки магазина-----
+	if shop_mobile_button != null:
+		shop_mobile_button.visible = false
+
+
+func _on_shop_mobile_button_pressed() -> void: #-----нажатие мобильной кнопки-----
+	if player_inside == null:
+		return
+
+	open_shop()

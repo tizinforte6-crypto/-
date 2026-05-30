@@ -11,17 +11,27 @@ config_version=5
 [application]
 
 config/name="3D корабль"
-run/main_scene="uid://nwoncet8iue3"
+run/main_scene="uid://ct5v6jr3xy7be"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+LoadingData="*uid://j0fwb7sry7gv"
+
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/uip_joystick/plugin.cfg")
+enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg", "res://addons/uip_joystick/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled=false
 
 [global_group]
 
 player="Группа для сбора сфер"
+wind_affected=""
+tutorial_input=""
 
 [input]
 

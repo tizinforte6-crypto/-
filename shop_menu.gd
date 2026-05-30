@@ -73,13 +73,14 @@ func open_shop(player_node: Node) -> void: #-----открытие магазин
 	_refresh_shop_items()
 
 
-func close_shop() -> void: #-----закрытие магазина-----
+func close_shop(unlock_controls: bool = true) -> void: #-----закрытие магазина-----
 	visible = false
 
-	if player != null and player.has_method("set_controls_locked"):
+	if unlock_controls and player != null and player.has_method("set_controls_locked"):
 		player.set_controls_locked(false)
 
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) # возвращаем управление мышью
+	if unlock_controls:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
 func _build_shop_items() -> void: #-----создание карточек товаров-----
@@ -208,11 +209,16 @@ func _on_buy_item_pressed(item: Dictionary) -> void: #-----покупка тов
 		bought_items.append(item_id)
 
 	_apply_item_effect(item)
-
+	get_tree().call_group("tutorial_input", "register_shop_purchase")
 	if player.has_method("update_energy_ui"):
 		player.update_energy_ui()
 
-	_refresh_shop_items()
+	close_shop(false)
+
+	if player.has_method("start_shop_upgrade_sequence"):
+		player.start_shop_upgrade_sequence(self)
+	else:
+		open_shop(player)
 
 
 func _apply_item_effect(item: Dictionary) -> void: #-----применение покупки-----

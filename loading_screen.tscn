@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://co3r0ofjo7tus"]
+
+[ext_resource type="Script" uid="uid://8xuty03yrc3" path="res://loading_screen.gd" id="1_mggpi"]
+
+[node name="LoadingScreen" type="Control" unique_id=1318281457]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mggpi")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1090847148]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=511506172]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=389605593]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="LoadingLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1690292558]
+layout_mode = 2
+text = "Загрузка..."
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="CenterContainer/VBoxContainer" unique_id=1742363380]
+custom_minimum_size = Vector2(350, 24)
+layout_mode = 2
+show_percentage = false

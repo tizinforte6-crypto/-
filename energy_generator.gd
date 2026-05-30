@@ -6,7 +6,8 @@ extends Node3D
 
 @onready var timer = $Timer
 @onready var spawn_point = $SpawnPoint
-
+@onready var charge_audio: AudioStreamPlayer3D = $ChargeAudio
+@onready var ready_audio: AudioStreamPlayer3D = $ReadyAudio
 @onready var stage1 = $MeshStage1
 @onready var stage2 = $MeshStage2
 @onready var stage3 = $MeshStage3
@@ -31,6 +32,8 @@ func start_charging(): #-----запуск зарядки сферы-----
 	stage3.visible = false
 
 	timer.start()
+	if charge_audio != null:
+		charge_audio.play()
 
 	# Половина зарядки
 	await get_tree().create_timer(charge_time * 0.5).timeout # ждём половину зарядки
@@ -51,7 +54,12 @@ func _on_timer_timeout(): #-----сфера готова-----
 	stage1.visible = false
 	stage2.visible = false
 	stage3.visible = true
+	
+	if charge_audio != null:
+		charge_audio.stop()
 
+	if ready_audio != null:
+		ready_audio.play()
 	spawn_sphere()
 
 func spawn_sphere(): #-----создание сферы-----

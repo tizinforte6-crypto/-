@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bdif04jpbqgjt"]
+
+[ext_resource type="PackedScene" uid="uid://da3bp6rajxuwb" path="res://Terrarin_3dmodel/low_poly_forest_tree_pack(1).glb" id="1_r57si"]
+
+[node name="Sketchfab_Scene" unique_id=914369801 instance=ExtResource("1_r57si")]
+
+[node name="Background_Tree_Atlas_004_Background_Tree_Atlas_0" parent="Sketchfab_model/Tree_Pack_fbx/RootNode/Background_Tree_Atlas_004" parent_id_path=PackedInt32Array(1127067474) index="0" unique_id=1065892858]
+transform = Transform3D(1, 4.5964647e-05, 0.00013884669, -4.5964647e-05, 1, -0.00012436866, -0.00013884669, 0.00012436866, 1, 0, 0, 0)

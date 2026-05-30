@@ -3,12 +3,16 @@ extends CharacterBody3D
 enum FalconState { PATROL, CHASE }
 
 @export_category("Патруль")
-@export var patrol_speed: float = 6.0
-@export var arrive_distance: float = 0.4
+@export var patrol_speed: float = 12.0
+@export var arrive_distance: float = 0.6
 @export var patrol_markers_path: NodePath = ^"../FalconPatrolMarkers"
+@onready var wing_audio: AudioStreamPlayer3D = $WingAudio
+@onready var scream_audio: AudioStreamPlayer3D = $ScreamAudio
+@onready var flap_animation_player: AnimationPlayer = $Flap/AnimationPlayer
 
+var scream_played: bool = false # крик уже был
 @export_category("Игрок")
-@export var detection_half_size: float = 5.0
+@export var detection_half_size: float = 15.0
 @export var chase_speed_multiplier: float = 2.0
 
 @export_category("Поворот")
@@ -23,6 +27,11 @@ var player: Node3D = null
 
 
 func _ready() -> void: #-----подготовка сокола-----
+	if wing_audio != null:
+		wing_audio.play()
+
+	_start_flap_animation()
+
 	player = _find_player()
 	_load_patrol_points()
 
@@ -109,6 +118,7 @@ func _check_player_below() -> void: #-----поиск игрока снизу----
 	var dz: float = abs(player_pos.z - falcon_pos.z)
 
 	if dx <= detection_half_size and dz <= detection_half_size:
+		_play_scream_once()
 		state = FalconState.CHASE
 
 
@@ -167,3 +177,28 @@ func _find_player() -> Node3D: #-----поиск игрока-----
 		return found_player as Node3D
 
 	return null
+
+func _play_scream_once() -> void: #-----крик сокола-----
+	if scream_played:
+		return
+
+	scream_played = true
+
+	if scream_audio != null:
+		scream_audio.play()
+
+func _start_flap_animation() -> void: #-----бесконечный взмах крыльев-----
+	if flap_animation_player == null:
+		print("AnimationPlayer орла не найден")
+		return
+
+	print("Анимации орла: ", flap_animation_player.get_animation_list())
+
+	if not flap_animation_player.has_animation("Flap"):
+		print("Анимация Flap не найдена")
+		return
+
+	var animation: Animation = flap_animation_player.get_animation("Flap")
+	animation.loop_mode = Animation.LOOP_LINEAR
+
+	flap_animation_player.play("Flap")

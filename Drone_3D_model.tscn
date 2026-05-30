@@ -1,0 +1,335 @@
+[gd_scene format=3 uid="uid://dkhx074ixvdvt"]
+
+[ext_resource type="PackedScene" uid="uid://bxnyf2ejm67sg" path="res://3d model/flying_drone_godot_compressed(1).glb" id="1_1q7gi"]
+
+[node name="AuxScene" unique_id=1180701979 instance=ExtResource("1_1q7gi")]
+
+[node name="Skeleton3D" parent="skeletal1" parent_id_path=PackedInt32Array(1781494405) index="0" unique_id=1910836512]
+bones/1/position = Vector3(0, 7, 0)
+bones/3/position = Vector3(-8.539447, 0.18870103, 7.2664723)
+bones/3/rotation = Quaternion(0, 0.27173617, 0, 0.96237177)
+bones/4/rotation = Quaternion(0, -0.26799724, 0, 0.9634197)
+bones/5/rotation = Quaternion(0, 0.26799724, 0, 0.9634197)
+bones/6/position = Vector3(8.539447, 0.18870103, 7.2664723)
+bones/6/rotation = Quaternion(0, -0.27173617, 0, 0.96237177)
+bones/7/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/8/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/9/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/10/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/11/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/12/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/13/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/14/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/15/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/16/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/17/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/18/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/19/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/20/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/21/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/22/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/24/position = Vector3(-8.539107, -0.1967187, 7.2664804)
+bones/24/rotation = Quaternion(0, 0.27173617, 0, 0.96237177)
+bones/25/position = Vector3(-8.539093, 0.019478083, 7.2664714)
+bones/25/rotation = Quaternion(0, 0.27219385, 0, 0.9622425)
+bones/26/position = Vector3(-8.539107, -0.1967187, -7.2664804)
+bones/26/rotation = Quaternion(0, -0.26799724, 0, 0.9634197)
+bones/27/position = Vector3(-8.539094, 0.019478083, -7.2664714)
+bones/27/rotation = Quaternion(0, -0.26753896, 0, 0.96354705)
+bones/28/position = Vector3(8.539093, 0.019478083, -7.266471)
+bones/28/rotation = Quaternion(0, 0.26845542, 0, 0.9632921)
+bones/29/position = Vector3(8.539107, -0.1967187, -7.2664804)
+bones/29/rotation = Quaternion(0, 0.26799724, 0, 0.9634197)
+bones/30/position = Vector3(8.539107, -0.1967187, 7.2664804)
+bones/30/rotation = Quaternion(0, -0.27173617, 0, 0.96237177)
+bones/31/position = Vector3(8.539093, 0.019478083, 7.2664714)
+bones/31/rotation = Quaternion(0, -0.2712784, 0, 0.96250093)
+bones/32/position = Vector3(-8.540071, 0.58911204, 7.266131)
+bones/32/rotation = Quaternion(0, 0.27173617, 0, 0.96237177)
+bones/33/position = Vector3(-8.539082, 0.58911204, -7.2664704)
+bones/33/rotation = Quaternion(0, -0.26799724, 0, 0.9634197)
+bones/34/position = Vector3(8.539082, 0.58911204, -7.2664704)
+bones/34/rotation = Quaternion(0, 0.26799724, 0, 0.9634197)
+bones/35/position = Vector3(8.539093, 0.58911204, 7.266472)
+bones/35/rotation = Quaternion(0, -0.27173617, 0, 0.96237177)
+bones/36/position = Vector3(-8.540405, 0.8047712, 7.265419)
+bones/36/rotation = Quaternion(0, 0.27219385, 0, 0.9622425)
+bones/37/position = Vector3(-8.540405, 0.8047712, -7.265419)
+bones/37/rotation = Quaternion(0, -0.26753896, 0, 0.96354705)
+bones/38/position = Vector3(8.540405, 0.8047712, -7.265419)
+bones/38/rotation = Quaternion(0, 0.26845542, 0, 0.9632921)
+bones/39/position = Vector3(8.540405, 0.8047712, 7.265419)
+bones/39/rotation = Quaternion(0, -0.2712784, 0, 0.96250093)
+bones/40/position = Vector3(-8.539092, 1.0929675, 7.266473)
+bones/40/rotation = Quaternion(0, 0.27173617, 0, 0.96237177)
+bones/41/position = Vector3(-8.539092, 1.0929675, -7.266473)
+bones/41/rotation = Quaternion(0, -0.26799724, 0, 0.9634197)
+bones/42/position = Vector3(8.539092, 1.0929675, -7.266473)
+bones/42/rotation = Quaternion(0, 0.26799724, 0, 0.9634197)
+bones/43/position = Vector3(8.539092, 1.0929675, 7.266473)
+bones/43/rotation = Quaternion(0, -0.27173617, 0, 0.96237177)
+bones/45/position = Vector3(-6.20162, 4.5027487e-06, 5.8779697)
+bones/46/position = Vector3(-6.20162, 4.5027487e-06, -5.87797)
+bones/46/rotation = Quaternion(0, -0.26799724, 0, 0.9634197)
+bones/47/position = Vector3(6.201625, 0, -5.877968)
+bones/47/rotation = Quaternion(0, 0.26799724, 0, 0.9634197)
+bones/48/position = Vector3(6.201625, 0, 5.877968)
+bones/50/position = Vector3(0.0060766637, 0.9982346, 0.34568524)
+bones/50/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/51/position = Vector3(0.11569944, 0.9982346, 0.23008609)
+bones/51/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/52/position = Vector3(-0.10740456, 0.9982346, 0.23008609)
+bones/52/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/57/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/58/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/59/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/60/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/62/position = Vector3(0, -8.881784e-16, 0)
+bones/73/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/74/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/75/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/76/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/77/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/78/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/80/position = Vector3(2.3841858e-07, 0.22488141, -0.35666448)
+bones/81/position = Vector3(2.3841858e-07, -0.17753482, -0.35666448)
+bones/82/position = Vector3(0, -0.26040244, 0)
+bones/83/position = Vector3(-1.0774277, 0.057000637, 1.4650913)
+bones/83/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/84/position = Vector3(-1.0774277, 0.057000637, -2.1784203)
+bones/84/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/85/position = Vector3(1.0774282, 0.057000637, 1.4650913)
+bones/85/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+bones/86/position = Vector3(1.0774282, 0.057000637, -2.1784203)
+bones/86/rotation = Quaternion(0, 0.00047523272, 0, 0.9999999)
+
+[node name="small_part_plate_190" parent="skeletal1/Skeleton3D" index="0" unique_id=1901700417]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="small_part_scew_fittings91" parent="skeletal1/Skeleton3D" index="1" unique_id=1352936619]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="small_part_plate_292" parent="skeletal1/Skeleton3D" index="2" unique_id=644649789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="top_board93" parent="skeletal1/Skeleton3D" index="3" unique_id=1627069992]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="screw_194" parent="skeletal1/Skeleton3D" index="4" unique_id=325122315]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="screw_295" parent="skeletal1/Skeleton3D" index="5" unique_id=1236093368]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="screw_396" parent="skeletal1/Skeleton3D" index="6" unique_id=1392687368]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="screw_497" parent="skeletal1/Skeleton3D" index="7" unique_id=702797680]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="receiver_middle_board98" parent="skeletal1/Skeleton3D" index="8" unique_id=2089419485]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="receiver_input99" parent="skeletal1/Skeleton3D" index="9" unique_id=475091571]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="receiver100" parent="skeletal1/Skeleton3D" index="10" unique_id=532342737]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="battery_input101" parent="skeletal1/Skeleton3D" index="11" unique_id=1007112633]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="battery102" parent="skeletal1/Skeleton3D" index="12" unique_id=998402643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="bottom_frame103" parent="skeletal1/Skeleton3D" index="13" unique_id=424722497]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="big_plate_screw_fittings104" parent="skeletal1/Skeleton3D" index="14" unique_id=36867439]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="middle_screw_1105" parent="skeletal1/Skeleton3D" index="15" unique_id=286409816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="middle_screw_2106" parent="skeletal1/Skeleton3D" index="16" unique_id=773101928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="middle_screw_3107" parent="skeletal1/Skeleton3D" index="17" unique_id=655609667]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="middle_screw_4108" parent="skeletal1/Skeleton3D" index="18" unique_id=369653322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="middle_screw_5109" parent="skeletal1/Skeleton3D" index="19" unique_id=1093067502]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="middle_screw_6110" parent="skeletal1/Skeleton3D" index="20" unique_id=1323862669]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="lower_body111" parent="skeletal1/Skeleton3D" index="21" unique_id=1072079918]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="bottom_venting112" parent="skeletal1/Skeleton3D" index="22" unique_id=1893609445]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="upper_body113" parent="skeletal1/Skeleton3D" index="23" unique_id=1801912364]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="camera_base114" parent="skeletal1/Skeleton3D" index="24" unique_id=1978278233]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="camera_fitting_screw_1115" parent="skeletal1/Skeleton3D" index="25" unique_id=1564976624]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="camera_fitting_screw_2116" parent="skeletal1/Skeleton3D" index="26" unique_id=1284349493]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="camera_fitting_screw_3117" parent="skeletal1/Skeleton3D" index="27" unique_id=1088002891]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="camera_fitting_screw_4118" parent="skeletal1/Skeleton3D" index="28" unique_id=880191587]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="camera119" parent="skeletal1/Skeleton3D" index="29" unique_id=855770031]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="camera_screw_1120" parent="skeletal1/Skeleton3D" index="30" unique_id=1508017889]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="camera_screw_2121" parent="skeletal1/Skeleton3D" index="31" unique_id=1779672351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="camera_screw_3122" parent="skeletal1/Skeleton3D" index="32" unique_id=1195832615]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="leg_1123" parent="skeletal1/Skeleton3D" index="33" unique_id=525831388]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="leg_2124" parent="skeletal1/Skeleton3D" index="34" unique_id=865808113]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="leg_3125" parent="skeletal1/Skeleton3D" index="35" unique_id=1466903044]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="leg_4126" parent="skeletal1/Skeleton3D" index="36" unique_id=1728632281]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="prop_1127" parent="skeletal1/Skeleton3D" index="37" unique_id=493496710]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="prop_motor_bolt_1128" parent="skeletal1/Skeleton3D" index="38" unique_id=1858598180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="motor_1129" parent="skeletal1/Skeleton3D" index="39" unique_id=844047532]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="prop_2130" parent="skeletal1/Skeleton3D" index="40" unique_id=1167612338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="prop_motor_bolt_2131" parent="skeletal1/Skeleton3D" index="41" unique_id=522718711]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="motor_2132" parent="skeletal1/Skeleton3D" index="42" unique_id=1370045697]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="prop_3133" parent="skeletal1/Skeleton3D" index="43" unique_id=711508385]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="prop_motor_bolt_3134" parent="skeletal1/Skeleton3D" index="44" unique_id=2109467926]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="motor_3135" parent="skeletal1/Skeleton3D" index="45" unique_id=1376517771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="prop_4136" parent="skeletal1/Skeleton3D" index="46" unique_id=424861649]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="prop_motor_bolt_4137" parent="skeletal1/Skeleton3D" index="47" unique_id=1969350837]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="motor_4138" parent="skeletal1/Skeleton3D" index="48" unique_id=1505964687]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="prop_bolt_nut_1139" parent="skeletal1/Skeleton3D" index="49" unique_id=457517523]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="prop_bolt_nut_2140" parent="skeletal1/Skeleton3D" index="50" unique_id=844149362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="prop_bolt_nut_3141" parent="skeletal1/Skeleton3D" index="51" unique_id=2021398042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="prop_bolt_nut_4142" parent="skeletal1/Skeleton3D" index="52" unique_id=365097461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="prop_bolt_cap_1143" parent="skeletal1/Skeleton3D" index="53" unique_id=572594734]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="prop_bolt_cap_2144" parent="skeletal1/Skeleton3D" index="54" unique_id=1054750857]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="prop_bolt_cap_3145" parent="skeletal1/Skeleton3D" index="55" unique_id=878378590]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="prop_bolt_cap_4146" parent="skeletal1/Skeleton3D" index="56" unique_id=1825752544]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="prop_motor_base_1147" parent="skeletal1/Skeleton3D" index="57" unique_id=236421301]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="prop_motor_base_2148" parent="skeletal1/Skeleton3D" index="58" unique_id=462008064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="prop_motor_base_3149" parent="skeletal1/Skeleton3D" index="59" unique_id=1746191627]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="prop_motor_base_4150" parent="skeletal1/Skeleton3D" index="60" unique_id=1537199771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="motor_base_screw_a_1151" parent="skeletal1/Skeleton3D" index="61" unique_id=380574562]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="motor_base_screw_a_2152" parent="skeletal1/Skeleton3D" index="62" unique_id=355293765]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="motor_base_screw_a_3153" parent="skeletal1/Skeleton3D" index="63" unique_id=58206869]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="motor_base_screw_a_4154" parent="skeletal1/Skeleton3D" index="64" unique_id=1010203158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="motor_base_screw_b_1155" parent="skeletal1/Skeleton3D" index="65" unique_id=1697425546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="motor_base_screw_b_2156" parent="skeletal1/Skeleton3D" index="66" unique_id=1532196025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="motor_base_screw_b_3157" parent="skeletal1/Skeleton3D" index="67" unique_id=258188348]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="motor_base_screw_b_4158" parent="skeletal1/Skeleton3D" index="68" unique_id=391392434]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="motor_base_screw_c_1159" parent="skeletal1/Skeleton3D" index="69" unique_id=1252247810]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="motor_base_screw_c_2160" parent="skeletal1/Skeleton3D" index="70" unique_id=1157602638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="motor_base_screw_c_3161" parent="skeletal1/Skeleton3D" index="71" unique_id=2025917154]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="motor_base_screw_c_4162" parent="skeletal1/Skeleton3D" index="72" unique_id=1497993647]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="motor_base_screw_d_1163" parent="skeletal1/Skeleton3D" index="73" unique_id=46323550]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="motor_base_screw_d_2164" parent="skeletal1/Skeleton3D" index="74" unique_id=1302942079]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="motor_base_screw_d_3165" parent="skeletal1/Skeleton3D" index="75" unique_id=1308926166]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)
+
+[node name="motor_base_screw_d_4166" parent="skeletal1/Skeleton3D" index="76" unique_id=1399178875]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.463238, 0)

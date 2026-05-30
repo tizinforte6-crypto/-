@@ -1,3 +1,54 @@
 [gd_scene format=3 uid="uid://iphjxb2svghh"]
 
-[node name="Node3D" type="Node3D" unique_id=1055913545]
+[ext_resource type="Script" uid="uid://do4uf0q0rwkny" path="res://death_scene.gd" id="1_bea04"]
+
+[node name="DeathScene" type="Control" unique_id=2135315815]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bea04")
+
+[node name="Background" type="ColorRect" parent="." unique_id=2080497876]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14901961, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2022274691]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1166473968]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2081833529]
+layout_mode = 2
+text = "Вы потеряли связь с дроном"
+horizontal_alignment = 1
+
+[node name="RestartButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=493689956]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+text = "Попробывать ещё раз"
+
+[node name="TutorialButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=62861741]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+text = "Ещё раз пройти обучение"
+
+[node name="MenuButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=12051906]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+text = "Выйти"

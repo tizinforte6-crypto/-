@@ -1,0 +1,200 @@
+[gd_scene format=3 uid="uid://cjo03v0odcgjv"]
+
+[ext_resource type="PackedScene" uid="uid://bg6hiq5safvc5" path="res://3d model/Flap.fbx" id="1_s2iv6"]
+
+[node name="Flap" unique_id=1297845966 instance=ExtResource("1_s2iv6")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="Bip01" parent="Eagle/Eagle(0)" parent_id_path=PackedInt32Array(1142925918) index="0" unique_id=271106106]
+transform = Transform3D(1.1348668e-06, 1, -1.2665986e-07, -0.99435556, 1.1418996e-06, 0.10609893, 0.106098935, 5.5367906e-09, 0.9943555, 9.999999e-09, 0.05785072, 0.74956864)
+
+[node name="Skeleton3D" parent="Eagle/Eagle(0)/Bip01" index="0" unique_id=1153103927]
+bones/0/rotation = Quaternion(-0.5153554, -0.4841569, -0.484157, 0.5153571)
+bones/1/position = Vector3(0.01898344, 0.16650043, -3.0750596e-07)
+bones/1/rotation = Quaternion(-1.8845599e-06, -8.3572417e-07, 0.61499476, 0.78853124)
+bones/2/position = Vector3(-0.16610992, -0.022141652, 0.05039271)
+bones/2/rotation = Quaternion(0.4081233, 0.9128374, -0.0071802754, 0.010580332)
+bones/3/rotation = Quaternion(-1.4210855e-14, -1.7763568e-15, -0.63990223, 0.76845634)
+bones/4/rotation = Quaternion(-7.105428e-15, 3.9968033e-15, 0.34617275, 0.93817085)
+bones/5/rotation = Quaternion(-0.011655091, 0.005261045, -0.28521612, 0.95837796)
+bones/6/rotation = Quaternion(-0.49000883, 0.037791222, 0.3008702, 0.81727624)
+bones/7/rotation = Quaternion(-2.1649351e-15, 1.3322678e-15, -0.13031973, 0.99147207)
+bones/8/rotation = Quaternion(-1.7763568e-15, -2.220446e-16, -0.33008522, 0.94395113)
+bones/9/rotation = Quaternion(-0.035666194, 0.013013636, 0.2964288, 0.9543001)
+bones/10/rotation = Quaternion(-2.2204463e-15, 1.776357e-14, -0.13140954, 0.99132824)
+bones/11/rotation = Quaternion(7.105428e-15, 1.5543124e-14, -0.45999178, 0.8879233)
+bones/12/rotation = Quaternion(0.52070016, 0.04045427, 0.261239, 0.81178147)
+bones/13/rotation = Quaternion(-4.857226e-15, -1.3322678e-15, -0.12712261, 0.9918871)
+bones/14/rotation = Quaternion(2.4424907e-15, 3.2196468e-15, -0.034847327, 0.9993927)
+bones/15/rotation = Quaternion(-0.99905246, -0.034617517, 0.00093308865, 0.026365444)
+bones/16/rotation = Quaternion(-5.440094e-15, -3.5527144e-14, -0.1258324, 0.9920516)
+bones/17/rotation = Quaternion(-1.4210856e-14, -3.2862605e-14, -0.49936032, 0.8663945)
+bones/18/position = Vector3(-0.1661099, -0.022141363, -0.05039248)
+bones/18/rotation = Quaternion(0.40812305, 0.91283965, 0.00703153, -0.010491315)
+bones/19/rotation = Quaternion(-1.4210855e-14, -7.1054274e-15, -0.6399023, 0.7684564)
+bones/20/rotation = Quaternion(-7.1054274e-15, 8.881784e-16, 0.3461717, 0.9381712)
+bones/21/rotation = Quaternion(0.01147911, -0.0052634235, -0.28521472, 0.95838046)
+bones/22/rotation = Quaternion(0.4900087, -0.037791234, 0.30087015, 0.8172762)
+bones/23/rotation = Quaternion(1.3655745e-14, -3.552714e-15, -0.13031973, 0.99147207)
+bones/24/rotation = Quaternion(3.5527137e-15, -1.7763568e-14, -0.33008522, 0.94395113)
+bones/25/rotation = Quaternion(0.035666186, -0.013013632, 0.2964287, 0.95430005)
+bones/26/rotation = Quaternion(2.6645357e-15, 4.7739594e-15, -0.13140954, 0.99132824)
+bones/27/rotation = Quaternion(-7.1054274e-15, -5.551115e-15, -0.4599917, 0.88792324)
+bones/28/rotation = Quaternion(-0.5207001, -0.040454224, 0.261239, 0.8117814)
+bones/29/rotation = Quaternion(7.2164507e-16, -8.881785e-16, -0.12712261, 0.9918871)
+bones/30/rotation = Quaternion(1.110223e-15, 1.9984014e-15, -0.034847327, 0.9993927)
+bones/31/rotation = Quaternion(-0.9990524, -0.034617513, -0.0009330883, -0.02636544)
+bones/32/rotation = Quaternion(-7.237268e-15, -1.7763573e-15, -0.12583189, 0.99205166)
+bones/33/rotation = Quaternion(7.105428e-15, 0, -0.49936032, 0.8663945)
+bones/34/position = Vector3(-0.25320065, -0.055951472, 9.0000015e-08)
+bones/34/rotation = Quaternion(1.13003495e-07, -2.547003e-06, 0.9709245, -0.23938626)
+bones/35/position = Vector3(0.16165131, -0.00861218, 2.1999969e-07)
+bones/35/rotation = Quaternion(-0.70186245, 0.08594729, -0.08594765, 0.7018655)
+bones/36/rotation = Quaternion(-1.4072077e-14, -1.5543122e-15, 0.13542558, 0.9907875)
+bones/37/rotation = Quaternion(3.2813438e-07, -9.4463104e-07, 0.32813442, 0.9446311)
+bones/38/position = Vector3(0.026048107, 0.02288808, -2.1999944e-07)
+bones/38/rotation = Quaternion(0.9983333, -0.057713218, 5.452764e-07, -7.6876006e-07)
+bones/39/position = Vector3(0.010399554, 0.22722033, -0.021064103)
+bones/39/rotation = Quaternion(-0.014511952, 0.30346513, -0.29592913, 0.9056072)
+bones/40/rotation = Quaternion(0.0039717588, -0.03573987, 0.6081442, 0.79301167)
+bones/41/rotation = Quaternion(0.14072742, 0.13315672, -0.34389925, 0.91880274)
+bones/42/rotation = Quaternion(0.010985327, 0.13009088, -0.080271736, 0.9881863)
+bones/43/rotation = Quaternion(-0.5600121, 0.82665896, 0.054775674, 0.004593874)
+bones/44/rotation = Quaternion(-0.00019047131, -0.056227487, -0.0033821338, 0.99841225)
+bones/45/rotation = Quaternion(0.79531777, -0.57983387, -0.10808075, -0.13993238)
+bones/46/rotation = Quaternion(-0.000834086, -0.08818608, 0.018974327, 0.9959229)
+bones/47/rotation = Quaternion(-0.65782267, 0.74978256, 0.069150314, 0.01771007)
+bones/48/rotation = Quaternion(-0.005299965, -0.06987467, 0.013816112, 0.9974461)
+bones/49/rotation = Quaternion(0.9122707, -0.4094905, -0.0066264644, 0.0059968787)
+bones/50/rotation = Quaternion(-0.0022215245, -0.05065604, -0.043756608, 0.99775463)
+bones/51/position = Vector3(0.010399558, 0.22722045, 0.021099485)
+bones/51/rotation = Quaternion(0.9055035, -0.29630563, 0.30340788, -0.014497066)
+bones/52/rotation = Quaternion(0.9122707, 0.4094905, -0.006626519, -0.0059970007)
+bones/53/rotation = Quaternion(-0.0105740195, -0.054320488, 0.048832458, 0.9972728)
+bones/54/rotation = Quaternion(-0.0037314221, -0.035443313, -0.60839796, 0.7928316)
+bones/55/rotation = Quaternion(-0.14074741, 0.13257436, 0.34390467, 0.91888183)
+bones/56/rotation = Quaternion(-0.010810228, 0.13083574, 0.08003317, 0.9881093)
+bones/57/rotation = Quaternion(0.5588829, 0.8275494, -0.052952792, 0.0028334514)
+bones/58/rotation = Quaternion(-0.0012600337, -0.08987979, 0.02070767, 0.99573654)
+bones/59/rotation = Quaternion(0.6580847, 0.74984515, -0.06661265, 0.014818431)
+bones/60/rotation = Quaternion(0.0039847475, -0.08888587, -0.0020850555, 0.9960317)
+bones/61/rotation = Quaternion(0.79589075, 0.5786693, -0.10893302, 0.14083156)
+bones/62/rotation = Quaternion(0.00087864173, -0.08590026, -0.018984199, 0.99612254)
+
+[node name="Bip01 L Toe0Nub" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="0" unique_id=534008227]
+transform = Transform3D(-0.8847258, -0.4648537, 0.034221876, -0.413746, 0.7494003, -0.5169274, 0.21465, -0.471498, -0.855345, -0.3210843, 0.07834935, -0.023189818)
+bone_idx = 8
+
+[node name="Bip01 L Toe1Nub" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="1" unique_id=1694136138]
+transform = Transform3D(-0.65817446, -0.75256395, -0.021296844, -0.040849037, 0.06394309, -0.9971174, 0.7517565, -0.655407, -0.07282721, -0.33583066, 0.05048391, -0.0433317)
+bone_idx = 11
+
+[node name="Bip01 L Toe2Nub" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="2" unique_id=1932333259]
+transform = Transform3D(-0.9905155, -0.020630639, -0.13584398, 0.08080447, -0.8870904, -0.45446867, -0.11112961, -0.46113488, 0.88034374, -0.31234998, 0.031527653, -0.019583529)
+bone_idx = 14
+
+[node name="Bip01 L Toe3Nub" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="3" unique_id=148553260]
+transform = Transform3D(-0.42503935, -0.90513307, -0.008701527, -0.05078535, 0.014248045, 0.9986082, -0.903749, 0.42488983, -0.052023485, -0.31995243, 0.04999535, 0.012450668)
+bone_idx = 17
+
+[node name="Bip01 R Toe0Nub" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="4" unique_id=945214035]
+transform = Transform3D(-0.884726, -0.4648534, -0.034220837, 0.41374514, -0.7494, -0.51692873, 0.21465105, -0.47149894, 0.85534436, -0.3210845, -0.07834952, -0.023189485)
+bone_idx = 24
+
+[node name="Bip01 R Toe1Nub" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="5" unique_id=1044627858]
+transform = Transform3D(-0.65817404, -0.7525645, 0.021297654, 0.040847547, -0.06394275, -0.99711764, 0.7517571, -0.65540683, 0.072825864, -0.335831, -0.05048425, -0.043331277)
+bone_idx = 27
+
+[node name="Bip01 R Toe2Nub" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="6" unique_id=1483212861]
+transform = Transform3D(-0.9905154, -0.020631544, 0.13584366, -0.08080496, 0.8870911, -0.45446748, -0.11112933, -0.46113375, -0.8803444, -0.31235018, -0.03152792, -0.019583087)
+bone_idx = 30
+
+[node name="Bip01 R Toe3Nub" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="7" unique_id=514912533]
+transform = Transform3D(-0.4250409, -0.9051324, 0.0087007955, 0.05078625, -0.014249328, 0.99860823, -0.90374845, 0.42489117, 0.05202481, -0.31995273, -0.04999571, 0.0124511495)
+bone_idx = 33
+
+[node name="Bip01 TailNub" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="8" unique_id=838208092]
+transform = Transform3D(-0.9553844, 0.2953657, 7.1510794e-07, -2.1893055e-07, -3.1958498e-06, 1.0000001, 0.2953658, 0.9553844, 3.1102727e-06, -0.09180012, 9.064087e-08, 0.017338775)
+bone_idx = 34
+
+[node name="Bone04" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="9" unique_id=837784910]
+transform = Transform3D(-0.99842465, -4.6505352e-07, 0.05611004, 5.4377574e-07, -1.0000001, 1.1968934e-06, 0.05611013, 1.179591e-06, 0.99842477, -0.248783, 3.027734e-07, 0.0568571)
+bone_idx = 35
+
+[node name="Bip01 HeadNub" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="10" unique_id=1875805016]
+transform = Transform3D(0.72709656, -0.6865349, -1.2605294e-06, 5.0314907e-07, -1.2745427e-06, 1.0000001, -0.686535, -0.7270966, -5.8894204e-07, 0.28533134, -6.5278044e-08, 0.029893866)
+bone_idx = 37
+
+[node name="Bone02" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="11" unique_id=1141107931]
+transform = Transform3D(0.8013651, 0.5981752, 1.1060724e-06, 1.6466679e-06, -3.8982444e-07, -1.0000001, -0.5981753, 0.80136526, -1.2897318e-06, 0.28855735, -3.0134328e-07, -0.0046309177)
+bone_idx = 38
+
+[node name="Bone09" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="12" unique_id=1097079498]
+transform = Transform3D(0.03884311, 0.96142805, -0.2722993, -0.9199531, 0.14079168, 0.3658741, 0.3900992, 0.23629071, 0.8899377, 0.28947374, -0.4430607, 0.4831542)
+bone_idx = 42
+
+[node name="Bone09" parent="Eagle/Eagle(0)/Bip01/Skeleton3D/Bone09" index="0" unique_id=708899627]
+transform = Transform3D(0.9953769, -0.095791996, -0.0069866315, 0.09574933, 0.99538606, -0.006206472, 0.0075489273, 0.0055088135, 0.9999563, 0.27657473, -1.9073486e-08, -9.536743e-08)
+
+[node name="Bone18" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="13" unique_id=1788013458]
+transform = Transform3D(-0.88025564, -0.39337346, 0.2653431, -0.44654214, 0.4976462, -0.74360496, 0.16046777, -0.77304935, -0.61371374, 0.016457155, -0.22704087, 0.24117464)
+bone_idx = 44
+
+[node name="Bone18" parent="Eagle/Eagle(0)/Bip01/Skeleton3D/Bone18" index="0" unique_id=238174742]
+transform = Transform3D(0.99428284, 0.09981439, -0.03792925, -0.09896866, 0.9948116, 0.023561401, 0.040084224, -0.019672891, 0.99900264, 0.11683678, -5.7220458e-08, 4.773671e-07)
+
+[node name="Bone12" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="14" unique_id=332899609]
+transform = Transform3D(-0.34341303, -0.8348174, 0.43028724, -0.861051, 0.09690332, -0.4992002, 0.375045, -0.541931, -0.7520984, 0.1607212, -0.3695878, 0.40185413)
+bone_idx = 46
+
+[node name="Bone12" parent="Eagle/Eagle(0)/Bip01/Skeleton3D/Bone12" index="0" unique_id=1211817145]
+transform = Transform3D(0.9932904, 0.024707887, 0.112975895, -0.020098003, 0.9989254, -0.041762747, -0.113886364, 0.039211947, 0.99271965, 0.15542023, 0, -7.465482e-08)
+
+[node name="Bone15" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="15" unique_id=753302969]
+transform = Transform3D(-0.76228637, -0.5831247, 0.28086457, -0.58315235, 0.4305054, -0.6889111, 0.2808076, -0.6889343, -0.6682189, 0.09699918, -0.2797522, 0.33470735)
+bone_idx = 48
+
+[node name="Bone15" parent="Eagle/Eagle(0)/Bip01/Skeleton3D/Bone15" index="0" unique_id=187641702]
+transform = Transform3D(0.99277014, 0.10166828, -0.063804045, -0.10004245, 0.9945838, 0.02818754, 0.06632426, -0.021600636, 0.99756426, 0.160347, -3.8146972e-08, 4.2915346e-08)
+
+[node name="Bone21" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="16" unique_id=2079188985]
+transform = Transform3D(-0.9353296, -0.2787163, 0.217888, -0.33947194, 0.5337215, -0.7745322, 0.099583484, -0.79840994, -0.5938219, 0.010880724, -0.13968575, 0.12842023)
+bone_idx = 50
+
+[node name="Bone21" parent="Eagle/Eagle(0)/Bip01/Skeleton3D/Bone21" index="0" unique_id=504036440]
+transform = Transform3D(0.99605453, 0.08827111, 0.009145209, -0.08841178, 0.9959502, 0.016327541, -0.0076669217, -0.017071666, 0.9998249, 0.12950942, -9.536743e-09, -7.948802e-08)
+
+[node name="Bone21(mirrored)" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="17" unique_id=1978850152]
+transform = Transform3D(-0.93086636, 0.2830162, 0.23106197, 0.35008815, 0.50999665, 0.7857115, 0.10452831, 0.8122843, -0.5738192, 0.010753259, 0.13966028, 0.12826702)
+bone_idx = 53
+
+[node name="Bone21(mirrored)" parent="Eagle/Eagle(0)/Bip01/Skeleton3D/Bone21(mirrored)" index="0" unique_id=766722989]
+transform = Transform3D(0.99605453, -0.08827111, 0.009144212, 0.08841176, 0.9959502, -0.016327629, -0.0076659215, 0.017071662, 0.9998249, 0.1295095, 4.7683717e-08, 2.9493123e-07)
+
+[node name="Bone09(mirrored)" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="18" unique_id=1852293153]
+transform = Transform3D(0.03944482, -0.9614777, -0.2720379, 0.9201766, 0.14107937, -0.36520082, 0.38951123, -0.23591757, 0.89029413, 0.28924513, 0.44301695, 0.48321724)
+bone_idx = 56
+
+[node name="Bone09(mirrored)" parent="Eagle/Eagle(0)/Bip01/Skeleton3D/Bone09(mirrored)" index="0" unique_id=1443872833]
+transform = Transform3D(0.9953769, 0.09579199, -0.006986631, -0.09574932, 0.9953861, 0.0062064715, 0.0075489264, -0.005508813, 0.99995637, 0.2765756, 5.722045e-08, -5.722045e-08)
+
+[node name="Bone18(mirrored)" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="19" unique_id=190639246]
+transform = Transform3D(-0.84904414, 0.4201746, 0.32027677, 0.5076462, 0.48088855, 0.71487206, 0.14635374, 0.7695448, -0.62159574, 0.016019613, 0.22628018, 0.2411514)
+bone_idx = 58
+
+[node name="Bone18(mirrored)" parent="Eagle/Eagle(0)/Bip01/Skeleton3D/Bone18(mirrored)" index="0" unique_id=2077413601]
+transform = Transform3D(0.99428284, -0.09981439, -0.03792925, 0.09896866, 0.9948116, -0.0235614, 0.040084224, 0.01967289, 0.99900264, 0.11683668, 0, 4.312635e-08)
+
+[node name="Bone15(mirrored)" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="20" unique_id=694095949]
+transform = Transform3D(-0.7395601, 0.600693, 0.30367523, 0.61366355, 0.4163866, 0.6708499, 0.27652854, 0.68248785, -0.67656636, 0.09663384, 0.27893326, 0.33528346)
+bone_idx = 60
+
+[node name="Bone15(mirrored)" parent="Eagle/Eagle(0)/Bip01/Skeleton3D/Bone15(mirrored)" index="0" unique_id=1283776241]
+transform = Transform3D(0.9927702, -0.101668306, -0.06380308, 0.10004249, 0.9945838, -0.028187454, 0.06632329, 0.021600647, 0.9975643, 0.16034704, 3.8146973e-07, -1.013279e-08)
+
+[node name="Bone12(mirrored)" parent="Eagle/Eagle(0)/Bip01/Skeleton3D" index="21" unique_id=126498448]
+transform = Transform3D(-0.3424937, 0.8358927, 0.4289304, 0.8603099, 0.0955498, 0.50073695, 0.37757826, 0.5405122, -0.75185174, 0.16115035, 0.3700632, 0.4015981)
+bone_idx = 62
+
+[node name="Bone12(mirrored)" parent="Eagle/Eagle(0)/Bip01/Skeleton3D/Bone12(mirrored)" index="0" unique_id=1094517875]
+transform = Transform3D(0.99329054, -0.024704892, 0.11297601, 0.020095022, 0.99892545, 0.041762408, -0.11388635, -0.039211947, 0.99271965, 0.15542015, 7.6293944e-08, -7.152557e-09)
