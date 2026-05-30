@@ -1,11 +1,49 @@
-Vietnamese
+# Drone Forest
 
-Dự án này được viết vào một ngày tháng 4 năm 2026
+3D-игра на Godot 4.6, где игрок управляет дроном в лесной карте, собирает энергосферы, покупает улучшения, избегает соколов и следит за зарядом батареи.
 
-cách sử dụng là sử dụng input.get_vector và dùng _unhandle_input để không bị vừa cá cần điều khiển và vừa xoay camera
+## Технологии
 
-English
+- Godot Engine 4.6.3
+- GDScript
+- Terrain3D
+- 3D модели: GLB/OBJ
+- Звуки: MP3/OGG/WAV
 
-This project was written on a day in April 2026.
+## Управление
 
-The method involves using input.get_vector and _unhandle_input to avoid simultaneously controlling the joystick and rotating the camera.
+- W — вперёд
+- S — назад
+- A — влево
+- D — вправо
+- Space — подняться
+- C — опуститься
+- Колесо мыши вверх/вниз — поворот дрона
+- E — взаимодействие / открыть магазин
+
+## Геймплей
+
+- Дрон имеет ограниченный заряд батареи.
+- Энергия пополняется синими энергосферами.
+- Энергосферы появляются на генераторах.
+- В магазине можно покупать улучшения.
+- Ветер влияет на движение дрона.
+- Соколы патрулируют карту и атакуют игрока.
+- При падении или столкновении дрон проигрывает.
+
+## Запуск проекта
+
+1. Установить Godot Engine 4.6.3.
+2. Открыть проект через `project.godot`.
+3. Запустить главную сцену.
+4. Для сборки открыть `Project → Export`.
+
+## Сборки
+
+В репозитории/релизе должны быть приложены:
+- Windows build: архив с `.exe` и ресурсами.
+- Android build: `.apk`.
+
+## Скриншоты
+
+Добавьте скриншоты игрового процесса в папку `screenshots/`.
